@@ -1,4 +1,3 @@
-
 #Ploting Tesla and GameStop Stock Prices
 
 #Installing Packages
@@ -32,10 +31,8 @@ def make_graph(stock_data, revenue_data, stock):
     xaxis_rangeslider_visible=True)
     fig.show()
 
-
 #Creating stock ticker for Telsa
 tesla = yf.Ticker("TSLA")
-
 
 #Saving the stock information (history) in datafarme
 tesla_data = tesla.history(period="max")
@@ -69,13 +66,6 @@ tesla_revenue = tesla_revenue[tesla_revenue['Revenue'] != ""]
 #Passing the revenue from String to Int and seeing the last 5 records 
 tesla_revenue['Revenue'] = pd.to_numeric(tesla_revenue['Revenue'])
 tesla_revenue.tail()
-
-
-
-
-
-
-
 
 #Creating stock ticker for GameStop
 gamestock = yf.Ticker("GME")
